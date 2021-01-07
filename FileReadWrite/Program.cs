@@ -9,10 +9,10 @@ namespace FileReadWrite
 
     class Program
     {
-        static string path = "C:\\Users\\banan\\Desktop\\table.txt";
+        static string path = "table.txt";
         static FileInfo fi1 = new FileInfo(path);
 
-        static public int CountLinesLINQ(FileInfo file)
+        public static int CountLinesLINQ(FileInfo file)
             => File.ReadLines(file.FullName).Count();
 
         static void Main()
@@ -30,7 +30,7 @@ namespace FileReadWrite
 
             Array.Resize(ref s, numberOfLines);
 
-            string line = String.Empty;
+            string line;
             char[] separators = new char[] { ' ', ':' };
 
             int i = 0;
